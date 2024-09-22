@@ -70,8 +70,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
            <label for="feminino">Feminino</label>
            <input type="radio" id="masculino"  name="genero" value="Masculino" required>
            <label for="masculino">Masculino</label>
-           <input type="radio" id="outros"  name="genero" value="ninformar" required>
-           <label for="outros">Não Informar</label>
+           <input type="radio" id="outros"  name="genero" value="Nada" required>
+           <label for="outros">Outro</label>
            <br><br>
        <div class="inputBox">
            <label for="datansc"><b>Data Nascimento:</b></label>

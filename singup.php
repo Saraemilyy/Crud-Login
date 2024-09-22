@@ -1,22 +1,3 @@
-<?php
-include_once('config.php');
-
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-     // Obtém os dados do formulário
-     $nome = $_POST['nome'];
-     $password= $_POST['senha'];
- 
-     // Escapa os dados para evitar SQL injection
-     $nome = mysqli_real_escape_string($conexao, $nome);
-     $password = mysqli_real_escape_string($conexao, $password);
- 
-     // Executa a consulta
-     $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, senha,telefone, email, sexo ,data_nasc,estado) 
-     VALUES ('$nome','$password', '$telefone', '$email', '$genero', '$data_nsc', '$estado')");
- 
-}
- ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
  <head>
@@ -28,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
  </head>
  <body>
     <div class="box">
-     <form action="singin.php" method="GET">
+     <form action="testaction.php" method="POST">
        <fieldset>
         <legend>
           <b>Login</b>
@@ -42,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         <div class="inputBox">
              <input type="password" name="senha" id="senha" class="inputUser" required>
              <label for="senha" class="labelInput">Senha</label>
-       <input type="submit" name="submit" value="Enviar" id="submit">
-       <a href="singin.php">Não possui uma conta? Clique aqui para se Cadastrar</a>
-       <a href="passwordremember.php">Esqueceu sua senha? <strong>Redefina</strong></a>
+       <input type="submit" name="submit" value="Enviar" class="Inputsubmit">
+       <a href="singin.php"><strong>Cadastre-se aqui</strong></a><br>
+       <a href="passwordremember.php"><strong>Redefina sua senha</strong></a>
        </fieldset>
      </form>
     </div>

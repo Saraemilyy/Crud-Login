@@ -1,5 +1,21 @@
 <?php
+session_start();
 
+if(isset($_SESSION['nome']) || isset($_SESSION['senha'])) {
+
+unset($_SESSION['nome']);
+unset($_SESSION['senha']);
+header('Location: singup.php');
+}
+
+else{
+  ?>
+  <script language="JavaScript">
+  <!--
+  alert("Logado com sucesso!");
+  </script>
+  <?php
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,10 +27,11 @@
   <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon"/>
   <title>Home - NoClub</title>
  </head>
+ 
 <body>
 <div class="box">
   <a href="">Visualizar Cadastros Existentes</a><br><br><br>
-  <a href="./singin.php">Novo Cadastro</a><br><br><br>
+  <a href="singin.php">Novo Cadastro</a><br><br><br>
   <a href="singup.php">Deslogar</a>
 </div>
 
