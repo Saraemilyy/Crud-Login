@@ -1,21 +1,12 @@
 <?php
-session_start();
+if (!isset($_SESSION['nome']) || !isset($_SESSION['senha'])) {
+  // Se não estiver logado, redirecione para 'singup.php'
+  header('Location: singup.php');
+  exit(); // Use exit para parar a execução do script
 
-if(isset($_SESSION['nome']) || isset($_SESSION['senha'])) {
-
-unset($_SESSION['nome']);
-unset($_SESSION['senha']);
-header('Location: singup.php');
 }
-
 else{
-  ?>
-  <script language="JavaScript">
-  <!--
-  alert("Logado com sucesso!");
-  </script>
-  <?php
-}
+  header('Location: home.php');}
 ?>
 
 <!DOCTYPE html>
@@ -35,10 +26,8 @@ else{
   <a href="singup.php">Deslogar</a>
 </div>
 
-
  <div id="rodape">
       <strong>&copy; Sara Castro 2024 - Web Developer</strong>
     </div>
 </body>
-
 </html>

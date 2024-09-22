@@ -11,22 +11,15 @@ $sql = "SELECT * FROM usuarios where nome = '$nome' and senha = '$senha'";
 $result = mysqli_query($conexao, $sql);
 
 
-  if (mysqli_num_rows($result) > 0) {
-   header("Location: home.php");
-   session_start();
-   exit();
+  if (mysqli_num_rows($result) < 1) {
+    echo "Nome ou senha incorretos.";
   } 
   
   else {
-   echo "Nome ou senha incorretos.";
-   ?>
 
-   <script language="JavaScript">
-   <!--
-   alert("Nome ou Senha inválidos!");
-   window.location = 'singup.php';
-   </script>
+   session_start();
+   header("Location: home.php");
+   exit();
 
-   <?php
   }}
-?>
+
