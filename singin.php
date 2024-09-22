@@ -34,16 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <title>Login - NoClub</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon"/>
+  <title>Cadastro - NoClub</title>
  </head>
  <body>
     <div class="box">
-     <form action="formulario.php" method="POST">
+     <form action="singin.php" method="POST">
        <fieldset>
         <legend>
-          <b>Formulário de Clientes</b>
+          <b>Formulário - Cadastro</b>
         </legend>
         <br>
         <div class="inputBox">
@@ -90,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        </div>
        <br>
        <input type="submit" name="submit" value="Enviar" id="submit">
+       <a href="singup.php">Já possui conta? Clique aqui para Logar</a>
        </fieldset>
      </form>
     </div>

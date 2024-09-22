@@ -1,10 +1,16 @@
 
 body{
  font-family: Arial, Helvetica, sans-serif;
- background-image: linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1));
+background: #33166C;
+background: linear-gradient(135deg, #33166C, #6AB3D3);
  color: white;
 }
 
+a{
+ text-decoration: none;
+ color: white;
+ font-size: 10px;
+}
 .box{
  position: absolute;
  left: 50%;
@@ -40,8 +46,8 @@ legend{
  outline: none;
  color: wheat;
  font-size: 15px;
- width: 100%;
- letter-spacing: 2px;
+ width: 70%;
+ letter-spacing: 1px;
 }
 
 .labelInput{
@@ -61,10 +67,11 @@ legend{
 
 #datansc{
  border: none;
- padding: 8px;
+ padding: 10px;
  border-radius: 10px;
  outline: none;
  font-size: 15px;
+ background-color: rgba(0, 0, 0, 0.4);
 }
 
 #submit{
