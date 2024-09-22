@@ -13,9 +13,9 @@
  </head>
 <body>
 <div class="box">
-  <a href="">Visualizar Registros</a><br><br><br>
-  <a href="./singin.php">Cadastra-se</a><br><br><br>
-  <a href="">Deslogar</a>
+  <a href="">Visualizar Cadastros Existentes</a><br><br><br>
+  <a href="./singin.php">Novo Cadastro</a><br><br><br>
+  <a href="singup.php">Deslogar</a>
 </div>
 
 

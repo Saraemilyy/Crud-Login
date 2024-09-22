@@ -9,7 +9,7 @@ background: linear-gradient(135deg, #33166C, #6AB3D3);
 a{
  text-decoration: none;
  color: white;
- font-size: 10px;
+ font-size: 15px;
 }
 .box{
  position: absolute;
@@ -17,7 +17,7 @@ a{
  top: 50%;
  transform: translate(-50%, -50%);
  background-color: rgba(0, 0, 0, 0.4);
- padding: 15px;
+ padding: 10px;
  border-radius: 15px;
  width: 20%;
  color: white;
@@ -46,6 +46,7 @@ legend{
  outline: none;
  color: wheat;
  font-size: 15px;
+ padding: 6px;
  width: 70%;
  letter-spacing: 1px;
 }
