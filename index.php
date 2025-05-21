@@ -1,12 +1,13 @@
 <?php
-if (!isset($_SESSION['nome']) || !isset($_SESSION['senha'])) {
-  // Se não estiver logado, redirecione para 'singup.php'
-  header('Location: singup.php');
-  exit(); // Use exit para parar a execução do script
 
+// Verifica se o usuário está logado (sem armazenar senha na sessão)
+session_start();
+
+// Verifica se o usuário NÃO está logado
+if (empty($_SESSION['logado'])) {
+    header('Location: singup.php');
+    exit();
 }
-else{
-  header('Location: home.php');}
 ?>
 
 <!DOCTYPE html>
@@ -14,20 +15,20 @@ else{
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="css/home.css">
   <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon"/>
   <title>Home - NoClub</title>
  </head>
  
 <body>
 <div class="box">
-  <a href="">Visualizar Cadastros Existentes</a><br><br><br>
+  <a href="visualizer.php">Visualizar Cadastros Existentes</a><br><br><br>
   <a href="singin.php">Novo Cadastro</a><br><br><br>
   <a href="singup.php">Deslogar</a>
 </div>
 
  <div id="rodape">
-      <strong>&copy; Sara Castro 2024 - Web Developer</strong>
+      <strong>&copy; Sara Castro 2025 - Web Developer</strong>
     </div>
 </body>
 </html>

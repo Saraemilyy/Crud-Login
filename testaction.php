@@ -1,8 +1,7 @@
 <?php
-
-if (isset($_POST["submit"]) && !empty($_POST['nome']) && !empty($_POST['senha'])) {
-
 include_once('config.php');
+
+if (isset($_POST['submit']) && !empty($_POST['nome']) && !empty($_POST['senha'])) {
 
 $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
@@ -16,10 +15,15 @@ $result = mysqli_query($conexao, $sql);
   } 
   
   else {
-
-   session_start();
-   header("Location: home.php");
-   exit();
+        $_SESSION['nome'] = $nome;  // Armazena o nome na sessão
+        $_SESSION['logado'] = true; // Marca como logado
+        // Debug: verifique se está chegando aqui
+        header("Location: index.php");
+        exit();
 
   }}
 
+
+  
+
+?>
